@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+/* For IE8 */
+header, nav, section, article, aside, footer {
+  display:block;
+}
