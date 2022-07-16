@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { useEffect } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -30,15 +29,6 @@ export default class MyDocument extends Document {
   }
 
   render () {
-    useEffect(() => {
-      document.createElement('header')
-      document.createElement('nav')
-      document.createElement('section')
-      document.createElement('article')
-      document.createElement('aside')
-      document.createElement('footer')
-    })
-
     return (
       <Html lang='pt'>
         <Head>
