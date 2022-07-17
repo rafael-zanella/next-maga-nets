@@ -18,16 +18,23 @@ export const Container = styled.div`
     text-align: center;
 
     img {
-      height: 150px;
+      max-height: 150px;
+      height: 100%;
     }
   }
 `
 
 export const Title = styled.h3`
+  position: absolute;
+  left: 0; right: 0;
+  top: 160px;
+  padding: 0 10px;
 `
 
 export const Price = styled.h3`
-  margin-top: 50px;
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0px;
   color: #b7b702;
 `
 
