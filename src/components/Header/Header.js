@@ -10,6 +10,9 @@ import {
 } from './Header.styled'
 
 import { GridContainer } from '@/components/GridContainer'
+import Link from 'next/link'
+import { Input } from '../Input/Input'
+
 
 export function Header () {
   return (
@@ -17,7 +20,7 @@ export function Header () {
       <GridContainer className='clearfix'>
         <div className='row'>
           <div className='col col-2 col-sm-3'>
-            <Logo><a href='/'>MagaNets</a></Logo>
+            <Logo><Link href='/'>MagaNets</Link></Logo>
           </div>
 
           <div className='col col-10 col-sm-9'>
@@ -25,13 +28,13 @@ export function Header () {
               <City className='col col-4'>Cidade: Gravataí</City>
               <Phone className='col col-4'>Central de atendimento</Phone>
               <WishlistAccess className='col col-4'>
-                <a href='/wishlist'>Lista de desejos</a> 
+                <Link href='/wishlist'>Lista de desejos</Link> 
               </WishlistAccess>
             </Infos>
 
             <InputArea className='row'>
               <div className='col col-12'>
-                <input style={{ width: '100%' }} />
+                <Input placeholder="Busca" />
               </div>
             </InputArea>
           </div>

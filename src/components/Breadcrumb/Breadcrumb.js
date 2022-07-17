@@ -1,16 +1,18 @@
 import { GridContainer } from '../GridContainer'
 import { Container } from './Breadcrumb.styled'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
+
 
 export const Breadcrumb = ({ crumbs }) => {
   return (
     <GridContainer>
       <Container>
-        <li><a href="/">Home</a></li>
+        <li><Link href="/">Home</Link></li>
         
         { crumbs.map((crumb) => (
           <li key={crumb.url}>
-            <a href={crumb.url}> {crumb.title} </a>
+            <Link href={crumb.url}>{crumb.title}</Link>
           </li>
         ))}
         
