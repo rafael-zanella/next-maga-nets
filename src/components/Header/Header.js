@@ -17,7 +17,7 @@ export function Header () {
       <GridContainer className='clearfix'>
         <div className='row'>
           <div className='col col-2 col-sm-3'>
-            <Logo><a href='/'>Maga Nets</a></Logo>
+            <Logo><a href='/'>MagaNets</a></Logo>
           </div>
 
           <div className='col col-10 col-sm-9'>

@@ -61,3 +61,26 @@ export const FavContainer = styled.span`
     color: red;
   }
 `
+
+export const Remove = styled.span`
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    line-height: 0;
+    font-weight: 500;
+  }
+`

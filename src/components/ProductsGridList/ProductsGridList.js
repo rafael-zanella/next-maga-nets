@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import { currencyFormatter } from '@/utils/currencyFormatter'
 
 
-
-
 export const ProductsGridList = ({ products, onClickProduct }) => {
   return (
     <GridContainer className='clearfix'>
@@ -30,10 +28,12 @@ export const ProductsGridList = ({ products, onClickProduct }) => {
               <Card
                 id={product.id.toString()}
                 title={product.title}
-                imageAlt={`${product.title}, ${product}`}
+                imageAlt={`${product.title}, ${product.style}`}
                 imageURL="https://firebasestorage.googleapis.com/v0/b/my-news-app-ad6d7.appspot.com/o/maganets%2Fshirt.svg?alt=media&token=e1534d49-4270-4929-a0ec-0649acfbfff2"
-                isDesired={false} // todo
-                price={currencyFormatter('pt-BR', product.currencyId).format(product.price)}
+                isDesired={product.isDesired} // todo
+                isRemoveOnly={product.isRemoveOnly}
+                price={product.price}
+                currencyId={product.currencyId}
                 onClick={onClickProduct}
               />
             </div>
@@ -46,7 +46,10 @@ export const ProductsGridList = ({ products, onClickProduct }) => {
 
 ProductsGridList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     sku: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
@@ -57,7 +60,9 @@ ProductsGridList.propTypes = {
     currencyId: PropTypes.string,
     currencyFormat: PropTypes.string,
     isFreeShipping: PropTypes.bool,
-    image: PropTypes.string
+    image: PropTypes.string,
+    isRemoveOnly: PropTypes.bool,
+    isDesired: PropTypes.bool
   })),
   onClickProduct: PropTypes.func,
 }
