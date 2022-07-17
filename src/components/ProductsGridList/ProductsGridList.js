@@ -2,7 +2,6 @@
 import { Card } from '../Card/Card'
 import { GridContainer } from '../GridContainer'
 import PropTypes from 'prop-types'
-import { currencyFormatter } from '@/utils/currencyFormatter'
 
 
 export const ProductsGridList = ({ products, onClickProduct }) => {

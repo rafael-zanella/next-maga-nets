@@ -3,6 +3,7 @@ import { Header } from '@/components/Header/Header'
 import { ProductsGridList } from '@/components/ProductsGridList/ProductsGridList'
 import { useEffect, useState } from 'react'
 
+
 export default function Wishlist() {
   const [products, setProducts] = useState([])
 
@@ -10,7 +11,7 @@ export default function Wishlist() {
     const wishlist = [ ...products ]
     const index = wishlist.findIndex((item) => item.id === productId)
     wishlist.splice(index, 1)
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('wishlist', JSON.stringify(wishlist))
     setProducts(wishlist)
   }
 

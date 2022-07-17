@@ -2,7 +2,6 @@ import { Breadcrumb } from '@/components/Breadcrumb/Breadcrumb'
 import { Header } from '@/components/Header/Header'
 import { ProductsGridList } from '@/components/ProductsGridList/ProductsGridList'
 import { getAllProducts } from '@/services/products/products.service'
-
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 
@@ -30,16 +29,16 @@ export default function Home(props) {
   }
 
   const addToWishlist = (product) => {
-    const oldItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const oldItems = JSON.parse(localStorage.getItem('wishlist')) || []
     const idAdded = oldItems.findIndex((item) => item.id === product.id)
   
     if(idAdded !== -1) {
       oldItems.splice(idAdded, 1)
     } else {
-      oldItems.push(product);
+      oldItems.push(product)
     }
     mapWishlistProducts(oldItems)
-    localStorage.setItem('wishlist', JSON.stringify(oldItems));
+    localStorage.setItem('wishlist', JSON.stringify(oldItems))
   }
 
   useEffect(() => {
