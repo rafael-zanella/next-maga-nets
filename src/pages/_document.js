@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel='shortcut icon' href='/favicon.ico' />
+          <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
         </Head>
 
         <body>
