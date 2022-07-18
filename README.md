@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MagaNets
+![Badge](https://img.shields.io/badge/node-v16.16.0-green)
 
 ## Getting Started
 
@@ -6,29 +7,24 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The develop mode is supported only by modern browsers.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+If you wish to test the application in other browsers, you need to build and run the project:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run build && npm run start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Folder Structure
+Each file inside `pages` is a frontend route in the application. The `components` folder includes all the reusable components. The `service` folder contains async methods to get data from the API. And finally, the `utils` folder to keep utility methods that can be used in various places in the application, like a currency formatter.
 
-To learn more about Next.js, take a look at the following resources:
+As we can't have files that are not real pages inside the `pages`, then the `tests` folder is being used for this purpose. Other Components and functions have their tests alongside with its files.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+The app is being deployed in the Vercel platform, and can be acceced at [https://next-maga-nets.vercel.app/](https://next-maga-nets.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
