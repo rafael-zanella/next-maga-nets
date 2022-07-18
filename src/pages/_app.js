@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/grid.css'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/stable'
