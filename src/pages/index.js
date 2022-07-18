@@ -4,6 +4,7 @@ import { ProductsGridList } from '@/components/ProductsGridList/ProductsGridList
 import { getAllProducts } from '@/services/products/products.service'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
+import localStorageHandler from '@/utils/localStorageHandler'
 
 
 export async function getServerSideProps () {
@@ -28,8 +29,8 @@ export default function Home(props) {
     }
   }
 
-  const addToWishlist = (product) => {
-    const oldItems = JSON.parse(localStorage.getItem('wishlist')) || []
+  const handleWishlist = (product) => {
+    const oldItems = localStorageHandler.get('wishlist')
     const idAdded = oldItems.findIndex((item) => item.id === product.id)
   
     if(idAdded !== -1) {
@@ -38,11 +39,11 @@ export default function Home(props) {
       oldItems.push(product)
     }
     mapWishlistProducts(oldItems)
-    localStorage.setItem('wishlist', JSON.stringify(oldItems))
+    localStorageHandler.set('wishlist', oldItems)
   }
 
   useEffect(() => {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+    const wishlist = localStorageHandler.get('wishlist')
     mapWishlistProducts(wishlist)
   }, [])
 
@@ -53,7 +54,7 @@ export default function Home(props) {
 
       <ProductsGridList
         products={products}
-        onClickProduct={addToWishlist} 
+        onClickProduct={handleWishlist} 
       />
     </div>
   )

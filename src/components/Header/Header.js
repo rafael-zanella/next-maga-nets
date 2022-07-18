@@ -19,26 +19,37 @@ export function Header () {
     <Container>
       <GridContainer className='clearfix'>
         <div className='row'>
-          <div className='col col-2 col-sm-3'>
+          <div className='col col-6 col-sm-7 col-md-8 col-lg-3'>
             <Logo><Link href='/'>MagaNets</Link></Logo>
           </div>
 
-          <div className='col col-10 col-sm-9'>
-            <Infos className='row'>
-              <City className='col col-4'>Cidade: Gravataí</City>
-              <Phone className='col col-4'>Central de atendimento</Phone>
-              <WishlistAccess className='col col-4'>
-                <Link href='/wishlist'>Lista de desejos</Link> 
-              </WishlistAccess>
+          <div className='col col-6 col-sm-5 col-md-4 col-lg-9'>
+            <Infos>
+              <City>
+                <span className='fa-solid fa-location-dot'></span>
+                <p>Cidade: Gravataí</p>
+              </City>
+              
+              <Phone>
+                <span className='fa-solid fa-phone'></span>
+                <p>Central de atendimento</p>
+              </Phone>
+              
+              <Link href='/wishlist'>
+                <WishlistAccess>
+                  <span className='fa-solid fa-heart'></span>
+                  <p>Lista de desejos</p>
+                </WishlistAccess>
+              </Link> 
             </Infos>
-
-            <InputArea className='row'>
-              <div className='col col-12'>
-                <Input placeholder="Busca" />
-              </div>
-            </InputArea>
           </div>
         </div>
+
+        <InputArea className='row'>
+          <div className='col col-12 col-lg-9 offset-lg-3'>
+            <Input placeholder="Busca" />
+          </div>
+        </InputArea>
       </GridContainer>
     </Container>
   )

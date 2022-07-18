@@ -15,9 +15,29 @@ export const Container = styled.div`
 export const Logo = styled.div`
   font-weight: 700;
   font-size: 24px;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
 `
 
 export const Infos = styled.div`
+  margin: 0;
+  line-height: 30px;
+  
+  > div {
+    display: inline-block;
+    width: 33%;
+    cursor: pointer;
+
+    p {
+      display: inline;
+      margin-left: 5px;
+
+      @media screen and (max-width: 909px){
+        display: none;
+      }
+    }
+  }
 `
 
 export const City = styled.div`
