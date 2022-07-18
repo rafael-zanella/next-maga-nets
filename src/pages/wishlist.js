@@ -1,6 +1,7 @@
 import { Breadcrumb } from '@/components/Breadcrumb/Breadcrumb'
 import { Header } from '@/components/Header/Header'
 import { ProductsGridList } from '@/components/ProductsGridList/ProductsGridList'
+import localStorageHandler from '@/utils/localStorageHandler'
 import { useEffect, useState } from 'react'
 
 
@@ -11,7 +12,7 @@ export default function Wishlist() {
     const wishlist = [ ...products ]
     const index = wishlist.findIndex((item) => item.id === productId)
     wishlist.splice(index, 1)
-    localStorage.setItem('wishlist', JSON.stringify(wishlist))
+    localStorageHandler.set('wishlist', wishlist)
     setProducts(wishlist)
   }
 
@@ -24,7 +25,7 @@ export default function Wishlist() {
   }
 
   useEffect(() => {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+    const wishlist = localStorageHandler.get('wishlist')
     addIsRemoveOnlyProp(wishlist)
   }, [])
 
