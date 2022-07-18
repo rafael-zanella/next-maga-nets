@@ -28,7 +28,7 @@ export const ProductsGridList = ({ products, onClickProduct }) => {
                 id={product.id.toString()}
                 title={product.title}
                 imageAlt={`${product.title}, ${product.style}`}
-                imageURL="https://firebasestorage.googleapis.com/v0/b/my-news-app-ad6d7.appspot.com/o/maganets%2Fshirt.svg?alt=media&token=e1534d49-4270-4929-a0ec-0649acfbfff2"
+                imageURL="https://firebasestorage.googleapis.com/v0/b/my-news-app-ad6d7.appspot.com/o/maganets%2Fcamisa.png?alt=media&token=dfe10068-b0d4-4a2f-af40-6435d7f27dbe"
                 isDesired={product.isDesired} // todo
                 isRemoveOnly={product.isRemoveOnly}
                 price={product.price}

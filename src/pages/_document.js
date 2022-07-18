@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
-
+  
   render () {
     return (
       <Html lang='pt'>
@@ -36,8 +36,13 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin="true" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel='shortcut icon' href='/favicon.ico' />
+          <link rel='shortcut icon' href='/favicon.ico' />          
+          
           <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
+          
+          <link rel="stylesheet" type="text/css" href="css/globals.css" media="screen" />
+          <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" /> 
+          <script type="text/javascript" src="js/respond.min.js"></script>
         </Head>
 
         <body>

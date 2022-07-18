@@ -51,4 +51,3 @@ Card.propTypes = {
   isRemoveOnly: PropTypes.bool,
   onClick: PropTypes.func,
 }
-// tood add remove only for wishlist page
