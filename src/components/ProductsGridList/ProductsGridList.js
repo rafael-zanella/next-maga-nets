@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 export const ProductsGridList = ({ products, onClickProduct }) => {
   return (
-    <GridContainer className='clearfix'>
+    <GridContainer className='clearfix' data-testid="products_grid_list">
       <div className="row">
 
         {
