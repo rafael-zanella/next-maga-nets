@@ -1,13 +1,13 @@
-const { productsMock } = require("./products.mock");
-const { getAllProducts } = require("./products.service")
+import { productsMock } from './products.mock'
+import { getAllProducts } from './products.service'
 
 describe('products.service', () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(productsMock),
-        status: 200
-      })
-    );
+  global.fetch = jest.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(productsMock),
+      status: 200
+    })
+  )
 
 
   it('should return the data correctly', async () => {
@@ -16,13 +16,13 @@ describe('products.service', () => {
   })
 
   it('should return 404', async () => {
-    fetch.mockImplementationOnce(() => Promise.reject({ status: 404 }));
+    fetch.mockImplementationOnce(() => Promise.reject({ status: 404 }))
     const data = await getAllProducts()
     expect(data.status).toBe(404)
   })
 
   it('should return status 500 when error', async () => {
-    fetch.mockImplementationOnce(() => Promise.reject({ status: 500 }));
+    fetch.mockImplementationOnce(() => Promise.reject({ status: 500 }))
     const data = await getAllProducts()
     expect(data.status).toBe(500)
   })

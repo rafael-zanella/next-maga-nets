@@ -16,7 +16,7 @@ import { Input } from '../Input/Input'
 
 export function Header () {
   return (
-    <Container>
+    <Container data-testid='header'>
       <GridContainer className='clearfix'>
         <div className='row'>
           <div className='col col-6 col-sm-7 col-md-8 col-lg-3'>
@@ -36,7 +36,7 @@ export function Header () {
               </Phone>
               
               <Link href='/wishlist'>
-                <WishlistAccess>
+                <WishlistAccess data-testid="wishlist_btn">
                   <span className='fa-solid fa-heart'></span>
                   <p>Lista de desejos</p>
                 </WishlistAccess>

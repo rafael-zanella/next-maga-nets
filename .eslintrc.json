@@ -4,6 +4,9 @@
         "es2021": true,
         "jest/globals": true 
     },
+    "globals": {
+        "global": true
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"

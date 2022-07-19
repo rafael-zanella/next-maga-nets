@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const Breadcrumb = ({ crumbs }) => {
   return (
-    <GridContainer>
+    <GridContainer data-testid="breadcrumbs">
       <Container>
         <li><Link href="/">Home</Link></li>
         
